@@ -1,0 +1,234 @@
+.account {
+    font-size: 1.25rem;
+    background: none;
+    @media (min-width: $mobile) {
+        background: url("../images/account.png") no-repeat top right;
+        min-height: 736px;
+    }
+
+    a {
+        font-size: 1.25rem;
+    }
+
+    &-user {
+        margin-bottom: 3rem;
+        &-data {
+            padding-left: 0;
+            list-style: none;
+            li {
+                margin-bottom: 1rem;
+                a {
+                    display: inline-block;
+                    border: 1px solid white;
+                    padding: 0 1rem;
+                    border-radius: 1rem;
+                }
+            }
+        }
+    }
+
+    .circles {
+        position: static;
+    }
+    .circle1 {
+        margin-left: 35%;
+    }
+    .circle--mid {
+        position: absolute;
+        left: 45%;
+        bottom: 200px;
+    }
+    .circle--small {
+        position: absolute;
+        left: 40%;
+        bottom: 400px;
+    }
+    .circle--small2 {
+        left: -40px;
+        bottom: 10px;
+    }
+
+    table {
+        tr {
+            td {
+                cursor: pointer;
+                &.td-red {
+                    color: #EB996E
+                }
+                &.td-yellow {
+                    color: $yellow
+                }
+            }
+            &:hover {
+                td {
+                    background: #2E7C64;
+                    color: white;
+                }
+            }
+        }
+    }
+    .bids {
+        &-wrap {
+            max-width: 100%;
+            overflow: auto;
+        }
+        &-item-data {
+            padding-left: 0;
+            list-style: none;
+            li {
+                padding: 1.25rem 0;
+                border-bottom: 1px solid $color;
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+        }
+        &-filter-tab {
+            color: $color;
+            font-size: 1.25rem;
+            width: 45%;
+            border-width: 0 0 1px 0;
+            border-bottom: 1px solid $color;
+            background: rgba(91, 219, 181, 0.9);
+            &--active, &:hover {
+                color: white;
+                border-color: white;
+            }
+        }
+    }
+
+    .crud {
+        &-list {
+            width: 100%;
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 2rem;
+            li {
+                width: 100%;
+                margin-bottom: 1rem;
+                .crud-list-num {
+                    width: 2rem;
+                }
+                .crud-list-name {
+                    width: 100%
+                }
+                &:last-child {
+                }
+                .btn {
+                    padding: 0 0.6rem;
+                    margin: 0 0 0 10px;
+                }
+            }
+        }
+    }
+
+    .events {
+        .btn-delete {
+            padding: 0 0.6rem;
+            margin: 0 0 0 10px;
+        }
+        &-item-data {
+            width: 100%;
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 2rem;
+            li {
+                width: 100%;
+                margin-bottom: 1rem;
+
+                .invalid-feedback {
+                    display: block;
+                }
+
+                .dp__main.dp__theme_light {
+                    padding: 0;
+
+                    .dp__input {
+                        background: none;
+                        color: white;
+                        border-color: white;
+                        border-radius: 0;
+                        border-width: 0 0 1px 0;
+                        &::placeholder {
+                            color: white;
+                            opacity: 1; /* Firefox */
+                        }
+                    }
+                    .dp__clear_icon, .dp__input_icon {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .books {
+        .book-item {
+            a {
+                font-size: 1.25rem;
+            }
+            .thin-border {
+                position: relative;
+            }
+            &--for-approve {
+                .thin-border {
+                    border-color: $yellow;
+                }
+            }
+            &-preview {
+                height: 220px;
+                @media (min-width: $mobile) {
+                    height: 250px;
+                }
+            }
+            &-data {
+                bottom: 5px;
+                left: 5px;
+                right: 5px;
+            }
+            &-approve-hint {
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: 0;
+                right: 0;
+                background: $yellow;
+                color: $color;
+                text-align: center;
+                padding: 5px;
+                transition: all 0.25s ease-in-out;
+            }
+            &:hover {
+                .book-item-approve-hint {
+                    background: #2E7C64;
+                }
+            }
+        }
+    }
+}
+
+.book-update {
+    @media (min-width: $mobile) {
+        min-height: 802px;
+        background: url("../images/form.png") no-repeat center right;
+    }
+    padding: 0;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+input {
+    color: white;
+}
+
+.control-label[for=book-imagefile] {
+    display: inline-block;
+    padding: 5px 5px 5px 35px;
+    height: 32px;
+    background: url('../images/file-load.svg') no-repeat center left;
+}
+.control-label[for=book-description] {
+    display: block;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}

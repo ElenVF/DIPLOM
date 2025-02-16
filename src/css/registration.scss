@@ -1,0 +1,24 @@
+.registration {
+    @media (min-width: $mobile) {
+        min-height: 619px;
+        background: url("../images/registration.png") no-repeat top right;
+    }
+    padding: 0;
+    position: relative;
+    margin-bottom: 1rem;
+
+    .circle {
+        position: absolute;
+        left: 10%;
+        bottom: 0;
+    }
+    .circle--mid {
+        left: 45%;
+        bottom: 0;
+    }
+    .circle--small {
+        left: auto;
+        right: 0;
+        bottom: 580px;
+    }
+}

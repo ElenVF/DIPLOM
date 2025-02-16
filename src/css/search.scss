@@ -1,0 +1,20 @@
+.search {
+
+  &-item {
+    padding: 0 0 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid $color;
+    font-size: 1.25rem;
+    &-data {
+      text-align: left;
+    }
+
+    a {
+      font-size: 1.25rem;
+    }
+    &-img {
+      width: 100px;
+      margin-right: 1rem;
+    }
+  }
+}

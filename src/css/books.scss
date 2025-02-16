@@ -1,0 +1,191 @@
+main>.books {
+    background: url("../images/books-mobile.png") no-repeat top left;
+    background-size: contain;
+    padding: 0 1rem;
+    @media (min-width: $mobile) {
+        background: url("../images/books.png") no-repeat top center;
+        background-size: auto;
+        padding: 0;
+    }
+}
+.books {
+    &-params {
+        margin-bottom: 3rem;
+        font-size: 1.5rem;
+
+        &-head {
+            margin-bottom: 1rem;
+        }
+
+        &-value {
+            font-weight: bold;
+        }
+
+        &-data {
+            padding-left: 0;
+            list-style: none;
+            display: flex;
+            align-content: center;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            margin-bottom: 0;
+            @media (min-width: $mobile) {
+                margin-bottom: 4rem;
+                text-align: left;
+                display: block;
+            }
+            li {
+                margin-bottom: 0;
+                @media (min-width: $mobile) {
+                    margin-bottom: 1rem;
+                }
+                a {
+                    font-size: 1.25rem;
+                    display: inline-block;
+                    border: 1px solid white;
+                    padding: 0 1rem;
+                    border-radius: 1rem;
+                }
+            }
+        }
+    }
+
+    .book-item {
+        position: relative;
+        &-preview {
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+            background-image: url("../images/default.png");
+            height: 220px;
+            @media (min-width: $mobile) {
+                height: 300px;
+            }
+        }
+        &-data {
+            position: absolute;
+            z-index: 2;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            padding: 5px;
+            background: rgba(34, 68, 58, 0.8);
+            color: white;
+            font-size: 1.25rem;
+        }
+        .thin-border {
+            display: block;
+        }
+        &:hover {
+            .thin-border {
+                border-color: #2E7C64;
+            }
+        }
+        &--selected {
+            .thin-border {
+                border-color: #2E7C64;
+            }
+        }
+        a {
+            font-size: 1.5rem;
+        }
+    }
+
+}
+
+.modal-book-form {
+    .modal-dialog {
+        max-width: 100%;
+        width: $container-width;
+    }
+
+    .modal-title {
+        color: white;
+        text-align: center;
+        font-size: 3rem;
+        width: 98%;
+        padding-top: 1rem;
+    }
+    .modal-body {
+        font-size: 2rem;
+        max-height: 80vh;
+        overflow: auto;
+        padding:  2rem 0;
+        @media (min-width: $mobile) {
+            padding: 2rem 3rem;
+        }
+        @media (min-width: 1600px) {
+            padding: 2rem 9rem;
+        }
+    }
+
+    .book-form-bg {
+        margin-top: 2rem;
+        height: 158px;
+        background-size: auto;
+        background: url("../images/book-form.png") no-repeat top center;
+    }
+
+    .delivery-values {
+        border-right: 0;
+        padding: 0 0 2rem 0;
+        @media (min-width: $mobile) {
+            padding: 0 3rem 3rem 0;
+            border-right: 1px solid $color;
+        }
+        &-rules {
+            font-size: 1.5rem;
+        }
+        &--right {
+            border: 0;
+            padding: 0 0 2rem 0;
+            @media (min-width: $mobile) {
+                padding: 0 3rem 3rem 3rem;
+            }
+        }
+        .delivery-value {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            @media (min-width: $mobile) {
+                padding: 1rem;
+            }
+            span {
+                flex-shrink: 0;
+                display: inline-block;
+                margin: 0 2rem 0 0;
+                width: 30px;
+                height: 30px;
+                border: 1px solid $yellow;
+                border-radius: 50%;
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background: none;
+                    margin: auto;
+                }
+            }
+            &:hover {
+                background: rgba(245,243,140,0.4);
+            }
+            &--active {
+                background: rgba(245,243,140,0.4);
+                span {
+                    &:before {
+                        background: $yellow;
+                    }
+                }
+            }
+        }
+    }
+}

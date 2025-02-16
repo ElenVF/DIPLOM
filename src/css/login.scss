@@ -1,0 +1,28 @@
+.login {
+    @media (min-width: $mobile) {
+        min-height: 834px;
+        background: url("../images/login.png") no-repeat top right;
+    }
+    padding: 0;
+    position: relative;
+    margin-bottom: 2rem;
+
+    .circles {
+        left: 1rem;
+        right: 1rem;
+        bottom: 0;
+    }
+    .circle {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .circle--mid {
+        left: 45%;
+        bottom: 120px;
+    }
+    .circle--small {
+        left: 60%;
+        bottom: 500px;
+    }
+}

@@ -1,0 +1,24 @@
+.home {
+    min-height: 0;
+    background: none;
+    padding: 0;
+    position: relative;
+    margin-bottom: 1rem;
+    @media (min-width: $mobile) {
+        min-height: 777px;
+        background: url("../images/home.png") no-repeat top right;
+    }
+
+    .circle {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .circle--mid {
+        left: 25%;
+        bottom: 120px;
+    }
+    .circle--small {
+        left: 45%;
+    }
+}
